@@ -5,5 +5,6 @@ class Student < ActiveRecord::Base
   
   def toggle_active_status
     self.active == true ? self.active = false : self.active = true 
+    self.save
   end 
 end
